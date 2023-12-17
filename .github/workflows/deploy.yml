@@ -1,0 +1,21 @@
+name: Deploy to EB
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets. AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets. AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets. AWS_REGION }}
+
+      # - name: Copy Files to the S3 Website Content Bucket
+      #   run: aws s3 sync _site s3://${{ secrets.AWS_S3_BUCKET_NAME }}

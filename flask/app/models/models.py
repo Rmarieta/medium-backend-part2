@@ -8,4 +8,4 @@ class User(db.Model):
     timestamp = db.Column(db.DateTime, nullable=False)
 
     def __str__(self): 
-        return f"User n°{self.id} ({self.email}), age {self.age}, registered on {self.timestamp}"
+        return f"User {self.id} ({self.email}), age {self.age}, registered on {self.timestamp}"
