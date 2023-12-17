@@ -8,7 +8,7 @@ main_bp = Blueprint('main', __name__)
 # IMPORTANT : leave the root route to the Elastic Beanstalk Load Balancer health check, it performs a GET to '/' every 5 seconds and expects a '200'
 @main_bp.route('/', methods=['GET'])
 def EB_healthcheck():
-    return 'OK', 200
+    return 'OK Changed', 200
 
 @main_bp.route('/register', methods=['POST'])
 def register_user():
