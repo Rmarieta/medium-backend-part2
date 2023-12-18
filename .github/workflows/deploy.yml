@@ -13,6 +13,21 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v2
 
+      - name: Set up Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install docker-compose
+
+      - name: Start Docker containers
+        run: docker-compose up -d --build
+
+      - name: Run pytest from inside the Flask container
+        run: |
+          docker exec flask-backend bash -c "python -m pytest"
+
+      - name: Stop Docker containers
+        run: docker-compose down -v
+
       - name: Generate deployment package
         run: |
           cd flask
