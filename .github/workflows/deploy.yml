@@ -5,6 +5,11 @@ on:
     branches:
       - deploy
 
+env:
+  POSTGRES_USER: testuser
+  POSTGRES_PASSWORD: testpassword
+  POSTGRES_DB: testdb
+
 jobs:
   build:
     runs-on: ubuntu-latest
