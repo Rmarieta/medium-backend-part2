@@ -1,7 +1,9 @@
 name: Deploy to EB
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - deploy
 
 jobs:
   build:
