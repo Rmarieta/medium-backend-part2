@@ -7,7 +7,7 @@ def test_route(test_client):
     """
 
     response_get = test_client.get('/')
-    assert response_get.status_code == 201
+    assert response_get.status_code == 200
 
     response_post = test_client.post('/')
     assert response_post.status_code == 405
