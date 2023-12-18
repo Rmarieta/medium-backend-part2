@@ -15,7 +15,6 @@ def register_user():
     try:
         
         data = request.get_json()
-        print('\n\nData\n\n',data,'\n\n')
         new_user = User(
             email = data["email"],
             age = data["age"],
