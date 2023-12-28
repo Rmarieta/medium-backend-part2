@@ -1,6 +1,6 @@
 # Part 2: Backend Deployment Pipeline to AWS Elastic Beanstalk & RDS
 
-This repository contains the source code for my medium tutorial that you can find on <a href='https://medium.com/@raphael.marietan/part-1-containerized-backend-with-flask-and-postgresql-f28e48c96224'>Part 2: Backend Deployment Pipeline to AWS Elastic Beanstalk & RDS</a>
+This repository contains the source code for my medium tutorial that you can find on <a href='https://blog.devgenius.io/part-2-backend-deployment-pipeline-to-aws-elastic-beanstalk-rds-50cb469595f3'>Part 2: Backend Deployment Pipeline to AWS Elastic Beanstalk & RDS</a>
 
 In this tutorial, we first create an instance of a Flask app and a database on AWS and we then build a cloud deployment pipeline that automate the testing and the release of our app.
 
